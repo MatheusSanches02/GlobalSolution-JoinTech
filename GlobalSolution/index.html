@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./index.css">
+
+    <script src="./index.js"></script>
+
+    <title>Night Up</title>
+</head>
+<body>
+    <!-- Menu top -->
+    <div class="container-menu-top">
+        <iframe src="./src/components/menu-top/menu-top.html"></iframe>
+    </div>
+    
+    <!-- Content -->
+    <div class="container-content">
+
+        <!-- Menu lateral -->
+        <div class="container-menu">
+
+            <!-- Title -->
+            <p class="title">Menu</p>
+        
+            <!-- List options -->
+            <div class="container-options">
+        
+                <!-- Home -->
+                <div class="container-item" onclick="setRouter(0)">
+                    <div id="home-tag" class="tag active">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <p>Home</p>
+                </div>
+                
+                <!-- Restaurantes -->
+                <div class="container-item" onclick="setRouter(1)">
+                    <div id="restaurant-tag" class="tag">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <p>Gastronomia</p>
+                </div>
+                
+                <!-- Teatros -->
+                <div class="container-item" onclick="setRouter(2)">
+                    <div id="parks-tag" class="tag">
+                        <i class="fas fa-bicycle"></i>
+                    </div>
+                    <p>Parques</p>
+                </div>
+                
+                <!-- Festas -->
+                <div class="container-item" onclick="setRouter(3)">
+                    <div id="party-tag" class="tag">
+                        <i class="fas fa-glass-cheers"></i>
+                    </div>
+                    <p>Festas</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Content -->
+        <div class="container-items">
+            <iframe id="routers" src="./src/pages/home/home.html"></iframe>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- Modal comments -->
+<div id="modal-comments" class="container-background-modal hide">
+    <div class="container-content-modal">
+    
+        <!-- Header -->
+        <div class="container-header">
+            <p class="title-modal">Avaliações do local</p>
+            <i onclick="addHide('modal-comments')" class="fas fa-times close-icon"></i>
+        </div>
+
+        <!-- Assessments -->
+        <div class="container-assessments">
+            
+        
+            <!-- Container icon feedback -->
+            <div class="container-icons-feedback">
+                <i class="icon-feedback fas fa-frown-open"></i>
+                <i class="icon-feedback fas fa-frown"></i>
+                <i class="icon-feedback fas fa-meh"></i>
+                <i class="icon-feedback fas fa-smile"></i>
+                <i class="icon-feedback fas fa-grin"></i>
+            </div>
+
+            <div class="container-comments">
+                <textarea 
+                    placeholder="Quer deixar um comentário?" 
+                    class="input-base textarea"
+                    [formControl]="comments"
+                    (keydown.enter)="confirmFeedback()">
+                </textarea>
+            </div>
+
+            <!-- Send -->
+            <div class="container-button">
+                <button class="btn btn-action" onclick="sendComments()">Enviar</button>
+            </div>
+        </div>
+
+        <!-- List Assessments -->
+        <div class="container-list-assessments">
+
+            <!-- Container assessments -->
+            <div class="assessments-item">
+                <div class="assessments-title">Muito bom!!!</div>
+                <div class="assessments-message">Muito bom!! Recomendo</div>
+            </div>
+            <div class="assessments-item">
+                <div class="assessments-title">Toppp</div>
+                <div class="assessments-message">Excelente, bonito top. Gostei da cor!</div>
+            </div>
+            <div class="assessments-item">
+                <div class="assessments-title">Otimo</div>
+                <div class="assessments-message">Vale cada centavo!</div>
+            </div>
+            <div class="assessments-item">
+                <div class="assessments-title">Custo x Benefício</div>
+                <div class="assessments-message">Satisfção total com o lugar!</div>
+            </div>
+            <div class="assessments-item">
+                <div class="assessments-title">Regular, quebra galho.</div>
+                <div class="assessments-message">Para um domingo entediante, até que é bom</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal info -->
+<div id="modal-infos" class="container-background-modal hide">
+    <div class="container-content-modal">
+    
+        <!-- Header -->
+        <div class="container-header">
+            <p class="title-modal">Informações sobre o local</p>
+            <i onclick="addHide('modal-infos')" class="fas fa-times close-icon"></i>
+        </div>
+
+        <p id="title-info" class="title-info">Burguer King</p>
+        <p id="value-info" class="value-info">Acima de tudo, é fundamental ressaltar que a competitividade nas transações comerciais talvez venha a ressaltar a relatividade do processo de comunicação como um todo. A nível organizacional, o comprometimento entre as equipes deve passar por modificações independentemente de todos os recursos funcionais envolvidos. O incentivo ao avanço tecnológico, assim como o aumento do diálogo entre os diferentes setores produtivos facilita a criação do impacto na agilidade decisória.</p>
+</div>
