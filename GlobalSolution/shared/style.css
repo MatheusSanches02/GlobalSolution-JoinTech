@@ -1,0 +1,63 @@
+@import url('https://use.fontawesome.com/releases/v5.10.2/css/all.css');
+@import url('./reset.css');
+@import url('./buttons.css');
+@import url('./inputs.css');
+@import url('./fonts.css');
+
+:root
+{
+    /* Utils */
+    --transition: 0.4s ease-in-out;
+    --width-mobile: 800px;
+    
+    /* Fonts */
+    --font: #ffffff;
+    --font-light: #808190;
+    --placeholder: #757480;
+
+    /* Actions */
+    --action: #3B67F2;
+    --action-hover: #2C2ECE;
+    
+    /* Backgrounds */
+    --background: #1F1D2B;
+    --background-icons: #34333F;
+    --background-cards: #252835;
+
+    --error: #F23D4F;
+    /* Status */
+    --warning: #FE7450;
+    --success: #1eb600;
+    --yellow: #d8d34a;
+}
+
+iframe 
+{
+    width: 100%;
+    height: 100%;
+}
+
+body
+{
+    font-size: 12px;
+    font-family: 'Regular';
+    color: var(--font);
+    background-color: var(--background);
+}
+
+.pointer
+{
+    cursor: pointer;
+}
+
+.hide
+{
+    display: none !important;
+}
+
+.flex-default
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

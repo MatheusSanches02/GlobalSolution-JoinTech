@@ -1,0 +1,21 @@
+.btn 
+{
+    border: none;
+    height: 30px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-action
+{
+    background-color: var(--action);
+    color: var(--font);
+}
+
+.btn-action:hover
+{
+    background-color: var(--action-hover);
+}

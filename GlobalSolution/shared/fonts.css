@@ -1,0 +1,11 @@
+@font-face 
+{
+    font-family: 'Regular';
+    src: url('../assets/fonts/Roboto/Roboto-Regular.ttf');
+}
+
+@font-face 
+{
+    font-family: 'Italic';
+    src: url('../assets/fonts/Roboto/Roboto-Italic.ttf');
+}

@@ -1,0 +1,55 @@
+@import url('../../../shared/style.css');
+
+.container-menu
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 100px;
+}
+
+.title
+{
+    font-size: 17px;
+}
+
+.container-input
+{
+    width: 550px;
+}
+
+.container-profile
+{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.container-user
+{
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.user-name
+{
+    width: 90px;
+    margin-left: 10px;
+}
+
+.container-bell
+{
+    position: relative;
+}
+
+.bell-active
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    background-color: var(--error);
+}
